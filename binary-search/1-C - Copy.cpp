@@ -1,12 +1,16 @@
-// A. Binary Search
-// https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
+// C. Closest to the Right
+// https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/C
 
 #include <iostream>
+#include <vector>
 #include <string>
+
 
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n, k;
     while (cin >> n >> k) {
         vector<int> arr(n);
@@ -16,21 +20,17 @@ int main() {
         for (int i = 0; i < k; i++) {
             int x;
             cin >> x;
-            // arr[lo] <= x, arr[hi] > x
+            // arr[lo] < x, arr[hi] >= x
             int lo = -1, hi = n;
             while (lo + 1 < hi) {
                 auto mid = lo + (hi - lo) / 2;
-                if (arr[mid] <= x) {
+                if (arr[mid] < x) {
                     lo = mid;
                 } else {
                     hi = mid;
                 }
             }
-            if (lo >= 0 && arr[lo] == x) {
-                cout << "YES" << endl;
-            } else {
-                cout << "NO" << endl;
-            }
+            cout << hi + 1 << endl;
         }
     }
     return 0;

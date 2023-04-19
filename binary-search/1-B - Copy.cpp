@@ -1,12 +1,13 @@
-// A. Binary Search
-// https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
+// B. Closest to the Left
+// https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/B
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n, k;
     while (cin >> n >> k) {
         vector<int> arr(n);
@@ -26,11 +27,7 @@ int main() {
                     hi = mid;
                 }
             }
-            if (lo >= 0 && arr[lo] == x) {
-                cout << "YES" << endl;
-            } else {
-                cout << "NO" << endl;
-            }
+            cout << lo + 1 << endl;
         }
     }
     return 0;
