@@ -2,11 +2,13 @@
 // https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
 
 #include <iostream>
+#include <vector>
 #include <string>
 
 using namespace std;
 
 int main() {
+
     int n, k;
     while (cin >> n >> k) {
         vector<int> arr(n);

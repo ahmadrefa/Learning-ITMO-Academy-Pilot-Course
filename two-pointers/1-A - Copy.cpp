@@ -1,7 +1,9 @@
 // A. Merging Arrays
 // https://codeforces.com/edu/course/2/lesson/9/1/practice/contest/307092/problem/A
 
-#include <bits/stdc++.h>
+// Merge two sorted arrays
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
